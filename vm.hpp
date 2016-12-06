@@ -299,7 +299,7 @@ class SynacorVM {
   }
 
   uint16_t ValueOfRegisterOrLiteral(uint16_t n) {
-    assert(IsLiteral(n) !!IsRegister(n));
+    assert(IsLiteral(n) || IsRegister(n));
     if (IsLiteral(n)) {
       return n;
     } else {
